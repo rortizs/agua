@@ -1,0 +1,311 @@
+@charset "UTF-8";
+/*------------------------------
+1. TIPOGRAFIA DEL SITIO
+--------------------------------*/
+html {
+  font-size: 13px; }
+
+body {
+  font-family: 'Rubik', sans-serif;
+  color: #696969; }
+
+/*-------------------------------------------
+2. COLOR DE FONDO PRINCIPAL
+---------------------------------------------*/
+.bg-primary {
+  background-color: #337ab7 !important; }
+
+/*-------------------------------------------
+3. COLOR DEL TEXTO PRINCIPAL
+---------------------------------------------*/
+.text-primary {
+  color: #337ab7 !important; }
+
+/*------------------------------------------
+4. ESTILOS GENERALES DE BOTONES
+-------------------------------------------*/
+.btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 3rem;
+  padding: 1rem 2rem; }
+
+.btn:hover {
+  -webkit-box-shadow: 0 6px 10px rgba(0, 0, 0, 0.31);
+          box-shadow: 0 6px 10px rgba(0, 0, 0, 0.31); }
+
+.btn:after {
+  content: '\f0a9';
+  font-family: 'FontAwesome';
+  position: relative;
+  left: .5rem;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease; }
+
+.btn:hover:after {
+  left: 1rem;
+  -webkit-transform: rotateZ(-360deg);
+          transform: rotateZ(-360deg); }
+
+/*--------------------------------------------
+5. ESTILOS BOTON PRINCIPAL ".btn-primary"
+--------------------------------------------*/
+.btn-primary {
+  background-color: #337ab7 !important;
+  border-color: #285f8f !important; }
+
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #285f8f !important; }
+
+.btn-primary:active {
+  background-color: #1d4567 !important;
+  border-color: #122a3f !important; }
+
+.btn-primary:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(51, 122, 183, 0.5) !important;
+          box-shadow: 0 0 0 0.2rem rgba(51, 122, 183, 0.5) !important; }
+
+/*-----------------------------------------
+6. SECCION BARRA DE NAVEGACIÓN ".navbar"
+------------------------------------------*/
+.btn-buscar {
+  padding: .6rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  color: rgba(0, 0, 0, 0.5);
+  border-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer; }
+
+/*Estilo Dropdown*/
+.dropdown-menu {
+  border: 1px solid #337ab7;
+  border-top-width: 5px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25); }
+
+.dropdown-menu a i {
+  font-size: .85rem;
+  margin-right: .5rem; }
+
+/*--------------------------------------------
+7. SECCION CAJA DE BUSQUEDA "#buscador-modal"
+---------------------------------------------*/
+#buscador-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  background: rgba(255, 255, 255, 0.86);
+  z-index: 1000;
+  display: none; }
+
+.btn-cerrar {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: #337ab7;
+  font-size: 3rem; }
+
+#nombre {
+  height: auto;
+  border-radius: 3rem 0 0 3rem;
+  font-size: 1.5rem;
+  padding: 1rem; }
+
+#buscar:after {
+  content: ''; }
+
+#buscar {
+  border-radius: 0 3rem 3rem 0;
+  font-size: 1.5rem; }
+
+/*---------------------------------------------
+8. ESTILOS PRESENTACIÓN "#presentacion"
+----------------------------------------------*/
+#presentacion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh; }
+
+.bienvenidos {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
+
+/*ESTILOS PARA INTERNET EXPLORER 11+*/
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+
+  .navbar {
+    min-height: 1px; } }
+/*---------------------------------------------
+9. ESTILOS BIENVENIDOS ".bienvenidos"
+----------------------------------------------*/
+.bienvenidos {
+  background: url("../images/fondo-bienvenido.png") no-repeat center center/cover;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  text-align: center; }
+
+.bienvenidos:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.41);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+
+.bienvenidos .btn {
+  width: 70%;
+  margin-bottom: .5rem;
+  text-transform: uppercase; }
+
+/*-----------------------------------------------
+10. ESTILOS SEPARADOR ".separador-titulos"
+-------------------------------------------------*/
+.separador-titulos {
+  display: inline-block;
+  margin-top: 2rem;
+  height: 4px;
+  width: 80px;
+  background: #337ab7; }
+
+/*-----------------------------------------------
+11. ESTILOS PROYECTOS "#proyectos"
+-------------------------------------------------*/
+.proyecto {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 2rem; }
+
+.proyecto .mascara {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(31, 29, 86, 0.73);
+  padding: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  opacity: 0;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+  z-index: 10; }
+
+.proyecto .mascara h3,
+.proyecto .mascara p {
+  position: relative;
+  top: -2rem;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  /*Correción para IE11+*/
+  width: 100%; }
+
+.proyecto .mascara .btn {
+  position: relative;
+  top: 2rem;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease; }
+
+.proyecto img {
+  width: 100%;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease; }
+
+/*Estado HOVER de cada proyecto*/
+.proyecto:hover .mascara {
+  opacity: 1; }
+
+.proyecto:hover .mascara h3,
+.proyecto:hover .mascara p,
+.proyecto:hover .mascara .btn {
+  top: 0; }
+
+.proyecto:hover img {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3); }
+
+/*--------------------------------------------
+12. EMPIEZAN LAS MEDIAS QUERIES
+----------------------------------------------*/
+@media (min-width: 768px) {
+  .btn-buscar {
+    padding: 0;
+    font-size: 1.4rem;
+    border-color: transparent; }
+
+  /*Estilos MegaMenu*/
+  .navbar .container {
+    position: relative; }
+
+  .mega-menu {
+    position: static; }
+
+  .mega-menu .dropdown-menu {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: auto; }
+
+  .bienvenidos {
+    background: url("../images/fondo-bienvenido-md.jpg") no-repeat center center/cover;
+    text-align: left; }
+
+  .bienvenidos .btn {
+    width: auto;
+    margin-bottom: 0;
+    margin-right: 1rem;
+    font-size: 1.5rem; } }
+@media (min-width: 990px) {
+  html {
+    font-size: 16px; } }
+
+/*# sourceMappingURL=estilos.css.map */
